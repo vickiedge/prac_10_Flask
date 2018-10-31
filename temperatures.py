@@ -4,6 +4,9 @@ app = Flask(__name__)
 
 
 @app.route('/')
+def temperatures():
+    return '<h1>Temperatures! Enter celsius value to convert to the end of the browser bar and press enter;)</h1>'
+
 @app.route('/<celsius>')
 def convert_temp (celsius=""):
     celsius_float = float(celsius)
